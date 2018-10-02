@@ -6,7 +6,7 @@ class Maiz {
 	method imagen() = imagen
 	
 	method serRegada(){
-		if(imagen = "corn_baby.png"){
+		if(imagen == "corn_baby.png"){
 			imagen = "corn_adult.png"
 		}
 	}
@@ -26,11 +26,11 @@ class Trigo {
 
 class Tomaco {
 	var posicion
-	var imagen =  "tomaco_baby.png"
+	var imagen =  "tomaco.png"
 	
 	method imagen() = imagen
 	
 	method serRegada(){
-		posicion = posicion.y()
+		posicion = posicion.up(1)
 	}
 }

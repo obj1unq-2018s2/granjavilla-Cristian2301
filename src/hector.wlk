@@ -17,13 +17,13 @@ object hector {
 	}
 	
 	method plantaTomaco(){
-		game.addVisualIn(new Tomaco(), self.posicion().clone())
+		game.addVisual(new Tomaco(posicion = self.posicion().clone()))
 		game.say(self, "mirame plantando tomaco")
 	}
 	
 	method regar(){
 		if(game.colliders(self).isEmpty()){
-			game.say(self, "no tengo nada para regar")
+			throw new Exception ("no tengo nada para regar")
 		}
 		else {
 			game.colliders(self).forEach({planta => planta.serRegada()})
